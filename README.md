@@ -9,4 +9,6 @@ Sistem Informasi Akademik Universitas berbasis Mobile
 - Slim 4 (Restful API)
 
 ## 
-![Screenshot](https://github.com/alfansyahgg/GaibUniversity/tree/master/app/src/main/assets/ss1.jpg?raw=true)
+<p align="center">
+  <img src="https://github.com/alfansyahgg/GaibUniversity/tree/master/app/src/main/assets/ss1.jpg?raw=true" height="350" title="hover text">
+</p>
