@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="7dp"
+    android:clickable="true"
+    app:cardBackgroundColor="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_profile_menu"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:text="Change Profile"
+            android:textColor="@color/bluePrime"
+            android:fontFamily="@font/twebregular"
+            android:drawableTint="@color/bluePrime"
+            android:drawableEnd="@drawable/ic_baseline_chevron_right_24"
+            />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
