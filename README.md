@@ -11,9 +11,9 @@ Build with Model View ViewModel
 - Slim 4 (Restful API)
 
 ## 
-<p align="center">
+<!-- <p align="center">
   <img src="ss1.jpg" height="450" title="Splash">
   <img src="ss4.jpg" height="450" title="Login">
   <img src="ss2.jpg" height="450" title="Dashboard">
   <img src="ss3.jpg" height="450" title="Profile">
-</p>
+</p> -->
