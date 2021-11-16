@@ -10,5 +10,7 @@ Sistem Informasi Akademik Universitas berbasis Mobile
 
 ## 
 <p align="center">
-  <img src="https://github.com/alfansyahgg/GaibUniversity/tree/master/app/src/main/assets/ss1.jpg?raw=true" height="350" title="hover text">
+  <img src="ss1.jpg" height="450" title="Splash">
+  <img src="ss2.jpg" height="450" title="Dashboard">
+  <img src="ss3.jpg" height="450" title="Profile">
 </p>
