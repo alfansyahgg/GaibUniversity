@@ -23,6 +23,14 @@
     <color name="gray">#B5BBC9</color>
     <color name="light_gray">#CFD2D8</color>
 
+    <color name="matchPrime1">#6F6EDF</color>
+    <color name="matchPrime2">#8E63CC</color>
+    <color name="matchPrime3">#A158B7</color>
+    <color name="matchPrime4">#AD4FA1</color>
+
+
+    <color name="red">#FF5252</color>
+
 
     <color name="a1">#304FFE</color>
     <color name="a2">#1A237E</color>

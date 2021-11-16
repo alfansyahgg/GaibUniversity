@@ -28,7 +28,7 @@ class SplashActivity : AppCompatActivity() {
         binding.tvSubtitle.startAnimation(fadein)
 
         Handler().postDelayed({
-                    val intent = Intent(this,HomeActivity::class.java)
+                    val intent = Intent(this,LoginActivity::class.java)
                     startActivity(intent)
                     finish()
         }, SPLASH_TIME_OUT.toLong())

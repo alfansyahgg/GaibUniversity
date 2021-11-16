@@ -1,6 +1,6 @@
 package com.example.gaibuniversity.Interface.Example
 
-import com.example.gaibuniversity.Model.ExampleModel
+import com.example.gaibuniversity.dataModel.ExampleModel
 import retrofit2.Call
 import retrofit2.http.GET
 

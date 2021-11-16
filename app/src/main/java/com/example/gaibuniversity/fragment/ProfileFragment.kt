@@ -10,8 +10,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.gaibuniversity.Adapter.ProfileAdapter
-import com.example.gaibuniversity.Model.ProfileMenuModel
-import com.example.gaibuniversity.R
+import com.example.gaibuniversity.dataModel.ProfileMenuModel
 import com.example.gaibuniversity.databinding.FragmentProfileBinding
 
 

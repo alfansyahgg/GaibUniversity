@@ -62,7 +62,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_below="@id/rl_profile"
-            android:background="@drawable/shape_dashboard_1"
+            android:background="@drawable/shape_solid_cornertop45"
             >
 
             <LinearLayout

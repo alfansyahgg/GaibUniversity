@@ -1,40 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<layout
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="150dp"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:clickable="true"
-    android:layout_columnWeight="1"
-    app:cardElevation="6dp"
-    app:cardCornerRadius="12dp"
-    android:layout_margin="12dp"
-    app:cardBackgroundColor="@color/white"
-    android:id="@+id/cv_menu"
+    xmlns:tools="http://schemas.android.com/tools"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:padding="16dp"
+    <data>
+        <variable
+            name="menu"
+            type="com.example.gaibuniversity.dataModel.HomeMenuModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_columnWeight="1"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="12dp"
+        app:cardBackgroundColor="@color/white"
+        android:id="@+id/cv_menu"
         >
-        <ImageView
-            android:id="@+id/iv_icon"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/document"
-            />
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Document"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/bluePrime"
-            android:fontFamily="@font/twebregular"
-            />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            >
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/document"
+                bind:icon_menu="@{menu.icon_menu}"
+                />
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@{menu.nama_menu}"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/bluePrime"
+                android:fontFamily="@font/twebregular"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

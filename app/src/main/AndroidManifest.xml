@@ -15,7 +15,8 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.GaibUniversity.NoActionBar"/>
         <activity
             android:name=".HomeActivity"
             android:exported="true"

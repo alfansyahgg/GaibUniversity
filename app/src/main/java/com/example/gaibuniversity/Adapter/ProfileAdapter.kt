@@ -5,11 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gaibuniversity.Model.ProfileMenuModel
+import com.example.gaibuniversity.dataModel.ProfileMenuModel
 import com.example.gaibuniversity.R
-import com.example.gaibuniversity.databinding.FragmentProfileBinding
 import com.example.gaibuniversity.databinding.ItemProfileBinding
-import java.util.zip.Inflater
 
 class ProfileAdapter(private val profileList: ArrayList<ProfileMenuModel>,context: Context)
     :RecyclerView.Adapter<ProfileAdapter.MyViewHolder>()

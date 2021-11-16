@@ -1,118 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HomeFragment"
-    android:id="@+id/ll_home"
-    android:background="@color/white"
     >
-
-<!--    <com.airbnb.lottie.LottieAnimationView-->
-<!--        android:id="@+id/lav_loading"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        app:lottie_autoPlay="true"-->
-<!--        app:lottie_fileName="signal.json"-->
-<!--        app:lottie_loop="true"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        />-->
-
-<!--    <com.google.android.material.appbar.MaterialToolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:theme="@style/Theme.GaibUniversity.NoActionBar"-->
-<!--        android:elevation="4dp"-->
-<!--        android:background="@color/a1"-->
-<!--        android:fitsSystemWindows="true"-->
-<!--        app:title="Dashboard"-->
-<!--        app:titleTextColor="@color/white"-->
-<!--        />-->
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/srl_dashboard"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/nsv_home"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_home"
+        android:background="@color/white"
+        >
+
+
+
+        <!--    <com.google.android.material.appbar.MaterialToolbar-->
+        <!--        android:id="@+id/toolbar"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="?attr/actionBarSize"-->
+        <!--        android:theme="@style/Theme.GaibUniversity.NoActionBar"-->
+        <!--        android:elevation="4dp"-->
+        <!--        android:background="@color/a1"-->
+        <!--        android:fitsSystemWindows="true"-->
+        <!--        app:title="Dashboard"-->
+        <!--        app:titleTextColor="@color/white"-->
+        <!--        />-->
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_dashboard"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white">
-            <RelativeLayout
+            android:layout_height="match_parent">
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsv_home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/bluePrime"
-                >
-
+                android:background="@color/white">
                 <RelativeLayout
-                    android:id="@+id/rl_dashboard"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_margin="20dp"
-                    >
-
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/tv_heading"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Gaib University"
-                        android:textAppearance="?attr/textAppearanceHeadline4"
-                        android:textColor="@color/white"
-                        app:fontFamily="@font/twebregular" />
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_marginTop="5dp"
-                        android:id="@+id/tv_username"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:fontFamily="@font/tweblight"
-                        android:text="Alfansyah"
-                        android:textColor="@color/white"
-                        android:textAppearance="?attr/textAppearanceSubtitle1"
-                        android:layout_below="@id/tv_heading"
-                        />
-
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_alignParentEnd="true"
-                        android:src="@drawable/logo" />
-
-                </RelativeLayout>
-                <GridLayout
-                    android:id="@+id/gl_home"
-                    android:alignmentMode="alignMargins"
-                    android:columnOrderPreserved="true"
-                    android:columnCount="2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/rl_dashboard"
-                    android:background="@drawable/shape_dashboard_1"
-                    android:padding="20dp"
-                    android:orientation="horizontal"
+                    android:background="@color/bluePrime"
                     >
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_main"
-                        android:layout_height="wrap_content"
+                    <RelativeLayout
+                        android:id="@+id/rl_dashboard"
                         android:layout_width="match_parent"
-                        tools:listitem="@layout/item_home"
-                        android:layout_gravity="center"
+                        android:layout_height="100dp"
+                        android:layout_margin="20dp"
                         >
-                    </androidx.recyclerview.widget.RecyclerView>
-
-                </GridLayout>
-            </RelativeLayout>
 
 
-        </androidx.core.widget.NestedScrollView>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gaib University"
+                            android:textAppearance="?attr/textAppearanceHeadline4"
+                            android:textColor="@color/white"
+                            app:fontFamily="@font/twebregular" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_heading"
+                            android:layout_marginTop="5dp"
+                            android:text="Alfansyah"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            android:textColor="@color/white"
+                            app:fontFamily="@font/tweblight" />
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/logo" />
+
+                    </RelativeLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/gl_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/rl_dashboard"
+                        android:background="@drawable/shape_solid_cornertop45"
+                        android:padding="20dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_main"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            tools:listitem="@layout/item_home"
+                            android:layout_gravity="center"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            >
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
 
 
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_loading"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="book.json"
+            app:lottie_loop="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
-    android:background="@color/bluePrime"
+    android:background="@drawable/shape_gradient_1"
     android:orientation="vertical"
     >
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logowhite"
         android:id="@+id/iv_splash"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="170dp"
