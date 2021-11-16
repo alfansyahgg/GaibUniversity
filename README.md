@@ -1,7 +1,9 @@
 
 # Gaib University
 
-Sistem Informasi Akademik Universitas berbasis Mobile
+Sistem Informasi Akademik Universitas berbasis Mobile.
+
+Build with Model View ViewModel
 
 ## Tools
 - Kotlin
@@ -11,6 +13,7 @@ Sistem Informasi Akademik Universitas berbasis Mobile
 ## 
 <p align="center">
   <img src="ss1.jpg" height="450" title="Splash">
+  <img src="ss4.jpg" height="450" title="Login">
   <img src="ss2.jpg" height="450" title="Dashboard">
   <img src="ss3.jpg" height="450" title="Profile">
 </p>
