@@ -3,10 +3,14 @@
 
 Sistem Informasi Akademik Universitas berbasis Mobile.
 
-Build with Model View ViewModel
+MVVM Arch.
 
 ## Tools
 - Kotlin
+- Retrofit2
+- Coroutines
+- Room
+- Firebase  (Soon)
 - Material Design
 - Slim 4 (Restful API)
 
