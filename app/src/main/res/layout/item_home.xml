@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:bind="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
+<!--<layout-->
+<!--    xmlns:bind="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    >-->
 
-    <data>
-        <variable
-            name="menu"
-            type="com.example.gaibuniversity.dataModel.HomeMenuModel" />
-    </data>
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="menu"-->
+<!--            type="com.example.gaibuniversity.dataModel.HomeMenuModel" />-->
+<!--    </data>-->
 
     <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -37,14 +40,14 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/document"
-                bind:icon_menu="@{menu.icon_menu}"
+
                 />
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text="@{menu.nama_menu}"
+
                 android:layout_marginTop="5dp"
                 android:textColor="@color/bluePrime"
                 android:fontFamily="@font/twebregular"
@@ -52,4 +55,4 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-</layout>
+<!--</layout>-->

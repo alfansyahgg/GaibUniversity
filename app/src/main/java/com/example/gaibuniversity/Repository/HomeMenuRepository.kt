@@ -1,6 +1,7 @@
 package com.example.gaibuniversity.Repository
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.lifecycle.MutableLiveData
@@ -18,20 +19,21 @@ class HomeMenuRepository {
 
     lateinit var homeAdapter: HomeAdapter
     private var homeList = ArrayList<HomeMenuModel>()
-    private val mutableLiveData = MutableLiveData<ArrayList<HomeMenuModel>>()
+    private val mutableLiveData = MutableLiveData<HomeMenuModel>()
 
-    fun getMutableLiveData(binding: FragmentHomeBinding): MutableLiveData<ArrayList<HomeMenuModel>> {
+    fun getMutableLiveData(binding: FragmentHomeBinding): MutableLiveData<HomeMenuModel> {
         MenusObject.menusInterface.getMenus()
-            .enqueue(object: Callback<ArrayList<HomeMenuModel>>{
+            .enqueue(object: Callback<HomeMenuModel>{
                 override fun onResponse(
-                    call: Call<ArrayList<HomeMenuModel>>,
-                    response: Response<ArrayList<HomeMenuModel>>
+                    call: Call<HomeMenuModel>,
+                    response: Response<HomeMenuModel>
                 ) {
                     if(response.isSuccessful){
+                        Log.d("Result", ""+response.body())
                         val result = response.body()
                         if(result != null){
-                            homeList = result
-                            mutableLiveData.value = homeList
+//                            homeList = result
+                            mutableLiveData.value = result!!
                             binding.rvMain.visibility = View.VISIBLE
                         }
                         if(binding.lavLoading.visibility == View.VISIBLE){
@@ -41,7 +43,7 @@ class HomeMenuRepository {
                     }
                 }
 
-                override fun onFailure(call: Call<ArrayList<HomeMenuModel>>, t: Throwable) {
+                override fun onFailure(call: Call<HomeMenuModel>, t: Throwable) {
                     binding.srlDashboard.isRefreshing = false
                     if(binding.lavLoading.visibility == View.VISIBLE){
                         binding.lavLoading.visibility = View.GONE
@@ -51,5 +53,6 @@ class HomeMenuRepository {
 
         return mutableLiveData
     }
+
 
 }

@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface MenusInterface {
-    @GET("menu")
-    fun getMenus(): Call<ArrayList<HomeMenuModel>>
+    @GET("menus")
+    fun getMenus(): Call<HomeMenuModel>
 
 }

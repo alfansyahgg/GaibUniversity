@@ -17,14 +17,12 @@ import com.example.gaibuniversity.Interface.Menus.MenusObject
 import com.example.gaibuniversity.dataModel.HomeMenuModel
 import com.example.gaibuniversity.ViewModels.HomeViewModel
 import com.example.gaibuniversity.databinding.FragmentHomeBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class HomeFragment : Fragment() {
 
@@ -39,10 +37,14 @@ class HomeFragment : Fragment() {
         homebinding = FragmentHomeBinding.inflate(layoutInflater,container,false)
         val view = homebinding.root
 
-        viewModel = ViewModelProvider(requireActivity()).get(HomeViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(HomeViewModel::class.java).apply {
+            homebinding.srlDashboard.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
+                refreshData()
+            })
+        }
         setupRecycler()
+
         modelData()
-        refreshData()
 
         return view
     }
@@ -58,8 +60,7 @@ class HomeFragment : Fragment() {
 
     fun modelData(){
         viewModel.getAllHomeMenus(homebinding).observe(viewLifecycleOwner, Observer {
-//            Log.d("TesModel",""+it)
-            showData(it)
+            showData(it.data)
         })
     }
 
@@ -79,16 +80,14 @@ class HomeFragment : Fragment() {
 
 
     fun refreshData(){
-        homebinding.srlDashboard.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
-            homebinding.lavLoading.visibility = View.VISIBLE
-            homebinding.rvMain.visibility = View.INVISIBLE
-            Handler().postDelayed(Runnable {
-                modelData()
-            }, 1500)
-        })
+        homebinding.lavLoading.visibility = View.VISIBLE
+        homebinding.rvMain.visibility = View.INVISIBLE
+        Handler().postDelayed(Runnable {
+            modelData()
+        }, 1500)
     }
 
-    fun showData(data: ArrayList<HomeMenuModel>){
+    fun showData(data: ArrayList<HomeMenuModel.MenusInfo>){
         homeAdapter.setData(data)
     }
 
